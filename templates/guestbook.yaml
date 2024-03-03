@@ -14,8 +14,8 @@ spec:
   destination:
     namespace: helm-guestbook
     server: {{ .Values.spec.destination.server }}
-  project: default
+  project: {{ .Values.spec.project }}
   source:
-    path: helm-guestbook
-    repoURL: {{ .Values.spec.source.repoURL }}
-    targetRevision: {{ .Values.spec.source.targetRevision }}
+    repoURL: https://github.com/argoproj/argocd-example-apps.git
+    path: guestbook
+    targetRevision: HEAD

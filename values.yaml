@@ -4,3 +4,4 @@ spec:
   source:
     repoURL: https://github.com/goldentooth/gitops
     targetRevision: HEAD
+  project: gitops
