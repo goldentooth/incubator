@@ -13,6 +13,7 @@ metadata:
 spec:
   destination:
     namespace: prometheus-node-exporter
+    server: 'https://kubernetes.default.svc'
   project: incubator
   source:
     repoURL: https://prometheus-community.github.io/helm-charts
