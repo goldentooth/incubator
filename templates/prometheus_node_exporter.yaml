@@ -21,19 +21,3 @@ spec:
     targetRevision: 4.31.0
     helm:
       releaseName: prometheus-node-exporter
-      valuesObject:
-        service:
-          enabled: true
-          type: ClusterIP
-          port: 9100
-          targetPort: 9100
-          nodePort:
-          portName: metrics
-          listenOnAllInterfaces: true
-          annotations:
-            prometheus.io/scrape: "true"
-        # Set a NetworkPolicy with:
-        # ingress only on service.port
-        # no egress permitted
-        networkPolicy:
-          enabled: true
